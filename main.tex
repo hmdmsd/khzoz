@@ -1,0 +1,220 @@
+%--------------- Personalize your document here ---------------
+\author{Messaoud HAMDI}
+\newcommand{\supervisorone}{Pierre MIRAT} % Enter your supervisor's name
+
+\title{Implémentation d'une plateforme de tests automatisés avec Cucumber pour le projet COTS SNCF\\[0.5 cm]} %Enter the title of your report 
+\date{2025 - 2026} % insert a specific date	
+
+\documentclass[a4paper,12pt,twoside]{report}
+\setcounter{secnumdepth}{3}
+\setlength{\parindent}{20pt}
+\usepackage[left=25mm,top=25mm,right=25mm,bottom=25mm]{geometry}
+\usepackage{gensymb}
+\usepackage{etoolbox} %required for cover page
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[usestackEOL]{stackengine}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage[user,titleref]{zref}
+\usepackage{xcolor}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\usepackage{float}
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage[capitalise]{cleveref}
+\usepackage{enumitem,kantlipsum}
+\usepackage{amssymb}
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{listings}
+\usepackage{minted}
+\usepackage{setspace}
+\usepackage{afterpage}
+\usepackage{titlesec}
+\usepackage[section]{placeins}
+\usepackage{diagbox}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{indentfirst}
+\usepackage{lettrine}
+\usepackage{pdfpages}
+\usepackage{tcolorbox}
+\newcommand{\ts}{\textsuperscript}
+\usepackage[tableposition = top]{caption}
+\usepackage[nottoc]{tocbibind} % This package automatically includes lists in TOC
+
+\usepackage{placeins}
+
+% ENHANCED BULLET POINT CONFIGURATION
+% Force visible bullet points with multiple fallback options
+\usepackage{textcomp}
+\usepackage{pifont}
+
+% Define custom bullet symbols that are guaranteed to show
+\newcommand{\bulletone}{\textbullet}
+\newcommand{\bullettwo}{--}
+\newcommand{\bulletthree}{*}
+
+% Override default itemize labels with visible symbols
+\renewcommand{\labelitemi}{\bulletone}
+\renewcommand{\labelitemii}{\bullettwo}
+\renewcommand{\labelitemiii}{\bulletthree}
+
+% Enhanced itemize settings with guaranteed visibility
+\setlist[itemize,1]{label=\bulletone, leftmargin=2em, itemsep=0.4em, parsep=0.2em, topsep=0.5em}
+\setlist[itemize,2]{label=\bullettwo, leftmargin=2.5em, itemsep=0.3em, parsep=0.1em}
+\setlist[itemize,3]{label=\bulletthree, leftmargin=3em, itemsep=0.2em, parsep=0.1em}
+\setlist[enumerate,1]{leftmargin=2em, itemsep=0.4em, parsep=0.2em, topsep=0.5em}
+\setlist[description]{leftmargin=2em, itemsep=0.4em, parsep=0.2em, topsep=0.5em}
+
+% Better spacing for sections
+\titlespacing{\chapter}{0pt}{-30pt}{20pt}
+\titlespacing{\section}{0pt}{12pt}{6pt}
+\titlespacing{\subsection}{0pt}{10pt}{4pt}
+
+\usemintedstyle{emacs}
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+% Proper line spacing
+\renewcommand{\baselinestretch}{1.2}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor={black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black},
+    bookmarksnumbered=true,
+    pdfstartview=FitH
+}
+
+\linespread{1.15}
+
+\newtheorem{theorem}{Theorem}[section]
+\graphicspath{{figures/}}	
+
+% Enhanced quote environment
+\usepackage{xcolor}
+\definecolor{quotemark}{gray}{0.7}
+\makeatletter
+\def\fquote{%
+    \@ifnextchar[{\fquote@i}{\fquote@i[]}%]
+           }%
+\def\fquote@i[#1]{%
+    \def\tempa{#1}%
+    \@ifnextchar[{\fquote@ii}{\fquote@ii[]}%]
+                 }%
+\def\fquote@ii[#1]{%
+    \def\tempb{#1}%
+    \@ifnextchar[{\fquote@iii}{\fquote@iii[]}%]
+                      }%
+\def\fquote@iii[#1]{%
+    \def\tempc{#1}%
+    \vspace{1em}%
+    \noindent%
+    \begin{list}{}{%
+         \setlength{\leftmargin}{0.02\textwidth}%
+         \setlength{\rightmargin}{0.02\textwidth}%
+                  }%
+         \item[]%
+         \begin{picture}(0,0)%
+         \put(-15,-5){\makebox(0,0){\scalebox{3}{\textcolor{quotemark}{``}}}}%
+         \end{picture}%
+         \begingroup\itshape}%
+ %%%%********************************************************************
+ \def\endfquote{%
+ \endgroup\par%
+ \makebox[0pt][l]{%
+ \hspace{0.8\textwidth}%
+ \begin{picture}(0,0)(0,0)%
+ \put(15,15){\makebox(0,0){%
+ \scalebox{3}{\color{quotemark}''}}}%
+ \end{picture}}%
+ \ifx\tempa\empty%
+ \else%
+    \ifx\tempc\empty%
+       \hfill\rule{100pt}{0.5pt}\\\mbox{}\hfill\tempa,\ \emph{\tempb}%
+   \else%
+       \hfill\rule{100pt}{0.5pt}\\\mbox{}\hfill\tempa,\ \emph{\tempb},\ \tempc%
+   \fi\fi\par%
+   \vspace{0.5em}%
+ \end{list}%
+ }%
+ \makeatother
+
+% Fix headheight warning
+\setlength{\headheight}{14.5pt}
+
+% Page header and footer setup
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\nouppercase{\rightmark}}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+
+\begin{document}
+
+\pagenumbering{roman}
+\thispagestyle{empty}
+\input{cover}
+\newpage
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}} % Exclude next sections from TOC
+\input{sections/dedication}
+\newpage
+\input{sections/acknowledgments}
+\newpage
+\input{sections/abstract}
+\newpage
+\input{sections/acronyms}
+\newpage
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}} % Re-include sections in TOC
+\renewcommand{\contentsname}{Table des matières} 
+\tableofcontents{}
+\newpage
+
+\renewcommand{\listfigurename}{Liste des figures}
+\listoffigures
+\newpage
+
+\renewcommand{\listtablename}{Liste des tableaux}
+\listoftables
+\clearpage
+
+\newpage
+\pagenumbering{arabic}% Arabic page numbers (and reset to 1)
+\input{sections/introduction}
+\newpage
+\input{sections/section1}
+\newpage
+\input{sections/section2}
+\newpage
+\input{sections/section3}
+\newpage
+\input{sections/section4}
+\newpage
+\input{sections/conclusion}
+
+\renewcommand\bibname{Références}
+\bibliographystyle{unsrt}
+\bibliography{bibliography}
+\newpage
+
+\input{sections/appendices}
+
+\clearpage
+
+\end{document}
