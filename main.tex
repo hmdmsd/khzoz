@@ -2,13 +2,13 @@
 \author{Messaoud HAMDI}
 \newcommand{\supervisorone}{Pierre MIRAT} % Enter your supervisor's name
 
-\title{Implémentation d'une plateforme de tests automatisés avec Cucumber pour le projet COTS SNCF\\[0.5 cm]} %Enter the title of your report 
-\date{2025 - 2026} % insert a specific date	
+\title{Satellite image inversion\\[0.5 cm]} %Enter the title of your report 
+\date{2024 - 2024} % insert a specific date	
 
-\documentclass[a4paper,12pt,twoside]{report}
+\documentclass[a4paper,12pt]{report}
 \setcounter{secnumdepth}{3}
 \setlength{\parindent}{20pt}
-\usepackage[left=25mm,top=25mm,right=25mm,bottom=25mm]{geometry}
+\usepackage[left=20mm,top=20mm,right=20mm,bottom=20mm]{geometry}
 \usepackage{gensymb}
 \usepackage{etoolbox} %required for cover page
 \usepackage{booktabs}
@@ -53,58 +53,69 @@
 
 \usepackage{placeins}
 
-% ENHANCED BULLET POINT CONFIGURATION
-% Force visible bullet points with multiple fallback options
-\usepackage{textcomp}
-\usepackage{pifont}
-
-% Define custom bullet symbols that are guaranteed to show
-\newcommand{\bulletone}{\textbullet}
-\newcommand{\bullettwo}{--}
-\newcommand{\bulletthree}{*}
-
-% Override default itemize labels with visible symbols
-\renewcommand{\labelitemi}{\bulletone}
-\renewcommand{\labelitemii}{\bullettwo}
-\renewcommand{\labelitemiii}{\bulletthree}
-
-% Enhanced itemize settings with guaranteed visibility
-\setlist[itemize,1]{label=\bulletone, leftmargin=2em, itemsep=0.4em, parsep=0.2em, topsep=0.5em}
-\setlist[itemize,2]{label=\bullettwo, leftmargin=2.5em, itemsep=0.3em, parsep=0.1em}
-\setlist[itemize,3]{label=\bulletthree, leftmargin=3em, itemsep=0.2em, parsep=0.1em}
-\setlist[enumerate,1]{leftmargin=2em, itemsep=0.4em, parsep=0.2em, topsep=0.5em}
-\setlist[description]{leftmargin=2em, itemsep=0.4em, parsep=0.2em, topsep=0.5em}
-
-% Better spacing for sections
-\titlespacing{\chapter}{0pt}{-30pt}{20pt}
-\titlespacing{\section}{0pt}{12pt}{6pt}
-\titlespacing{\subsection}{0pt}{10pt}{4pt}
-
 \usemintedstyle{emacs}
 \newcommand\blankpage{%
     \null
     \thispagestyle{empty}%
     \addtocounter{page}{-1}%
     \newpage}
+\renewcommand{\baselinestretch}{2}
 
-% Proper line spacing
-\renewcommand{\baselinestretch}{1.2}
+% for the vertical padding
 
-\hypersetup{
-    colorlinks=true,
-    linkcolor={black},
-    citecolor={blue!50!black},
-    urlcolor={blue!80!black},
-    bookmarksnumbered=true,
-    pdfstartview=FitH
-}
+% \hypersetup{
+%     colorlinks,
+%     linkcolor={black},
+%     citecolor={blue!50!black},
+%     urlcolor={blue!80!black}
+% }
 
-\linespread{1.15}
+\linespread{1}
 
 \newtheorem{theorem}{Theorem}[section]
-\graphicspath{{figures/}}	
+\graphicspath{{images/}}	
 
-% Enhanced quote environment
+% %----------------------------------TITLE PAGE -----------------------------------
+% \makeatletter
+% \def\maketitle{
+%   \begin{center}\leavevmode
+%       \normalfont
+       
+%       \vskip 3cm   
+%       \textsc{\large \department}\\
+%       \vskip 1.5cm
+%       \rule{\linewidth}{0.2 mm} \\
+%       {\large \exam}\\[1 cm]
+%       {\huge \bfseries  \@title  }\\[1 cm]
+% 	\rule{\linewidth}{0.2 mm} \\[1.5 cm]
+	 
+% 	\begin{minipage}[t]{0.45\textwidth}
+% 		\begin{flushleft} \large
+% 			\emph{Achieved by:}\\
+% 			\@author\\
+			
+% 		\end{flushleft}
+% 	\end{minipage}
+% 	\begin{minipage}[t]{0.45\textwidth}
+% 	    \begin{flushright} \large
+% 			\ifdefempty{\supervisortwo}{\emph{Supervisor:\\}}{\emph{Supervisor:\\}}
+% 			\supervisorone\\
+% 			\ifdefempty{\supervisortwo}{}{\supervisortwo\\}
+% 		\end{flushright}
+% 	\end{minipage}
+% 	\vfill
+% 	{\Large \@date\par}
+%   \end{center}
+%   %\vfill
+%   %\null
+%   \cleardoublepage
+%   }
+% \makeatother
+
+% \afterpage{\blankpage}
+
+%-------------------------------- ENDTITLE PAGE ----------------------------------
+
 \usepackage{xcolor}
 \definecolor{quotemark}{gray}{0.7}
 \makeatletter
@@ -152,25 +163,13 @@
  \end{list}%
  }%
  \makeatother
-
-% Fix headheight warning
-\setlength{\headheight}{14.5pt}
-
-% Page header and footer setup
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\headrulewidth}{0.4pt}
-\fancyhead[LE,RO]{\thepage}
-\fancyhead[LO]{\nouppercase{\rightmark}}
-\fancyhead[RE]{\nouppercase{\leftmark}}
+ %%%%********************************************************************
 
 \begin{document}
 
 \pagenumbering{roman}
-\thispagestyle{empty}
 \input{cover}
 \newpage
-
 \addtocontents{toc}{\protect\setcounter{tocdepth}{-1}} % Exclude next sections from TOC
 \input{sections/dedication}
 \newpage
@@ -180,19 +179,17 @@
 \newpage
 \input{sections/acronyms}
 \newpage
-
 \addtocontents{toc}{\protect\setcounter{tocdepth}{3}} % Re-include sections in TOC
-\renewcommand{\contentsname}{Table des matières} 
+\renewcommand{\contentsname}{Contents} 
 \tableofcontents{}
 \newpage
-
-\renewcommand{\listfigurename}{Liste des figures}
-\listoffigures
+\renewcommand{\listfigurename}{List of figures}
+\listofigures
 \newpage
-
-\renewcommand{\listtablename}{Liste des tableaux}
+\renewcommand{\listtablename}{List of tables}
 \listoftables
 \clearpage
+% This is how you can organize your document
 
 \newpage
 \pagenumbering{arabic}% Arabic page numbers (and reset to 1)
@@ -207,14 +204,18 @@
 \input{sections/section4}
 \newpage
 \input{sections/conclusion}
-
-\renewcommand\bibname{Références}
+\renewcommand\bibname{References}
 \bibliographystyle{unsrt}
 \bibliography{bibliography}
 \newpage
-
 \input{sections/appendices}
 
-\clearpage
+%If you came here because you want your references in a new page, uncomment the following line
+
+\clearpage % If you want the references in a separate page
+
+\clearpage % If you want the appendix in a separate page
+%\appendix
+%\input{sections/appendix}
 
 \end{document}
