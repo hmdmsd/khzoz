@@ -2,36 +2,44 @@
 
 \section{Introduction}
 
-Ce premier chapitre présente une vue d'ensemble du stage en exposant l'entreprise d'accueil et le contexte du projet COTS. Il établit le cadre contextuel nécessaire à la compréhension des enjeux multidimensionnels de cette mission de fin d'études, qui s'articule autour de :
-\begin{itemize}
-    \item La participation aux activités quotidiennes de développement
-    \item L'implémentation spécialisée d'une plateforme d'automatisation des tests
-\end{itemize}
+Ce premier chapitre présente une vue d'ensemble du stage en exposant l'entreprise d'accueil et le contexte du projet COTS. Il établit le cadre contextuel nécessaire à la compréhension des enjeux multidimensionnels de cette mission de fin d'études, centrée sur un défi d'ingénierie complexe : la conception et l'implémentation d'un framework d'automatisation des tests pour un système critique.
 
-Cette présentation contextuelle constitue le socle indispensable pour appréhender les dimensions technique, organisationnelle, sociétale et stratégique développées dans les chapitres suivants.
+Cette mission s'articule autour d'un projet d'innovation technique majeur visant à transformer radicalement les processus d'assurance qualité du projet COTS par l'automatisation intelligente des tests de régression. Le défi principal consiste à concevoir une solution native pour une architecture microservices distribuée, intégrant les principes du Behavior-Driven Development (BDD) avec l'écosystème Spring Boot existant, tout en répondant aux exigences de fiabilité et de performance d'un système ferroviaire critique.
+
+Au-delà des aspects purement techniques, cette expérience d'ingénieur nécessite une approche systémique intégrant plusieurs dimensions d'analyse complémentaires :
+
+\textbf{La dimension technique et scientifique} explore les innovations méthodologiques apportées par l'hybridation BDD-microservices et évalue rigoureusement les performances de la solution développée, contribuant à l'enrichissement de l'état de l'art en automatisation de tests.
+
+\textbf{La dimension organisationnelle} examine l'impact transformateur sur les pratiques de travail des équipes qualité, analysant les enjeux de conduite du changement et l'évolution des rôles professionnels induits par l'automatisation.
+
+\textbf{La dimension environnementale et sociétale} évalue la contribution du projet à la durabilité numérique par l'optimisation des ressources informatiques et l'amélioration de la fiabilité du transport ferroviaire, infrastructure essentielle de la mobilité durable.
+
+\textbf{La dimension stratégique et économique} analyse la création de valeur pour l'entreprise et le positionnement concurrentiel dans le secteur de la transformation numérique, ainsi que l'impact sur la modernisation du secteur ferroviaire français.
+
+Cette présentation contextuelle constitue le socle indispensable pour appréhender l'analyse multidimensionnelle développée dans les chapitres suivants, illustrant la capacité d'un ingénieur à mener un projet d'innovation selon une approche rigoureuse et une vision systémique des enjeux contemporains de l'ingénierie logicielle.
 
 \section{Sopra Steria : Acteur majeur de la transformation numérique}
 
 \subsection{Présentation générale et positionnement stratégique}
 
-Sopra Steria s'impose comme un acteur européen majeur de la transformation numérique, fort de plus de 50 000 collaborateurs répartis dans 30 pays et s'appuyant sur plus de 50 ans d'expérience. L'entreprise se distingue par sa capacité à combiner une compréhension approfondie des enjeux métiers avec une expertise technologique de pointe.
+Sopra Steria s'impose comme un acteur européen majeur de la transformation numérique, fort de plus de 50~000 collaborateurs répartis dans 30 pays et s'appuyant sur plus de 50 ans d'expérience. L'entreprise se distingue par sa capacité à combiner une compréhension approfondie des enjeux métiers avec une expertise technologique de pointe.
 
-En tant que leader du conseil, des services numériques et du développement logiciel, Sopra Steria accompagne les plus grandes organisations dans leurs projets de transformation à travers différents secteurs :
+En tant que leader du conseil, des services numériques et du développement logiciel, Sopra Steria accompagne les plus grandes organisations dans leurs projets de transformation à travers plusieurs secteurs stratégiques :
 \begin{itemize}
     \item Transport et mobilité
-    \item Finance et banque
+    \item Finance et banque  
     \item Secteur public et gouvernemental
     \item Industrie et énergie
 \end{itemize}
 
 \subsubsection{Indicateurs de performance}
 
-Cette position de leadership se traduit par des indicateurs remarquables :
+Cette position de leadership se traduit par des indicateurs remarquables qui témoignent de la solidité et de la croissance de l'entreprise :
 
 \begin{description}[leftmargin=3cm, labelwidth=2.5cm]
     \item[Chiffre d'affaires] Supérieur à 5 milliards d'euros, démontrant une performance financière solide et une croissance soutenue
     \item[Présence géographique] Dans 30 pays, soulignant sa portée internationale et sa capacité d'adaptation aux contextes locaux
-    \item[Écosystème humain] Plus de 50 000 employés, reflétant des ressources substantielles et une diversité de compétences
+    \item[Écosystème humain] Plus de 50~000 employés, reflétant des ressources substantielles et une diversité de compétences
     \item[Partenariats stratégiques] Avec les principaux fournisseurs technologiques et de solutions cloud du marché
     \item[Reconnaissance] Leader du conseil en transformation numérique par les grands analystes sectoriels
     \item[Portefeuille] Projets critiques réalisés avec succès pour les secteurs gouvernementaux et les grandes entreprises
@@ -46,21 +54,19 @@ Cette position de leadership se traduit par des indicateurs remarquables :
 
 \subsubsection{Centre de Services de Nantes}
 
-Le Centre de Services de Nantes représente un centre d'excellence spécialisé dans le domaine ferroviaire, caractérisé par :
+Le Centre de Services de Nantes représente un centre d'excellence spécialisé dans le domaine ferroviaire. Cette entité rassemble plus de 200 experts dédiés exclusivement aux projets SNCF, créant une concentration d'expertise qui permet une collaboration étroite avec les équipes du client. Les caractéristiques principales de ce centre incluent :
 \begin{itemize}
-    \item Plus de 200 experts dédiés exclusivement aux projets SNCF
-    \item Une concentration d'expertise permettant une collaboration étroite avec les équipes SNCF
     \item Un niveau de spécialisation technique et métier particulièrement élevé
     \item Une organisation en centres de compétences favorisant la mutualisation des connaissances
+    \item Une approche managériale alliant leadership collaboratif et excellence technique
+    \item Un environnement favorisant l'innovation tout en maintenant des standards de qualité rigoureux
 \end{itemize}
-
-L'approche managériale se caractérise par un mélange de leadership collaboratif et d'excellence technique, favorisant un environnement où l'innovation est encouragée tout en maintenant des standards de qualité rigoureux.
 
 \subsection{Mission, valeurs et approche différenciante}
 
 \subsubsection{Mission stratégique}
 
-La mission de Sopra Steria s'articule autour de l'accompagnement des organisations dans leur parcours de transformation numérique, selon trois axes fondamentaux :
+La mission de Sopra Steria s'articule autour de l'accompagnement des organisations dans leur parcours de transformation numérique selon trois axes fondamentaux :
 
 \begin{description}
     \item[Excellence Numérique] Conception et déploiement de solutions numériques innovantes qui maximisent la valeur métier et l'efficacité opérationnelle des clients, adaptées aux spécificités sectorielles et organisationnelles
@@ -70,7 +76,7 @@ La mission de Sopra Steria s'articule autour de l'accompagnement des organisatio
 
 \subsubsection{Système de valeurs}
 
-L'approche différenciante repose sur un système de valeurs profondément ancré :
+L'approche différenciante repose sur un système de valeurs profondément ancré qui guide l'ensemble des actions de l'entreprise :
 
 \begin{description}
     \item[Orientation Client] Compréhension approfondie des enjeux clients et adaptation des solutions aux défis spécifiques de chaque organisation, garantissant une réponse sur mesure aux problématiques métiers
@@ -79,35 +85,23 @@ L'approche différenciante repose sur un système de valeurs profondément ancr�
     \item[Amélioration Continue] Encouragement du développement professionnel permanent et de la veille technologique pour rester en phase avec l'évolution rapide des technologies et des pratiques sectorielles
 \end{description}
 
-\subsection{Positionnement et intégration au sein du projet COTS}
+\subsection{Contexte professionnel et environnement de mission}
 
-Durant cette mission de stage, mon intégration s'est effectuée au sein de l'équipe projet COTS, selon l'organisation suivante :
+Durant cette mission de stage, l'intégration s'est effectuée au sein de l'équipe projet COTS selon une organisation matricielle structurée, favorisant l'excellence technique et la collaboration interdisciplinaire nécessaires à la réussite du projet d'automatisation.
 
-\subsubsection{Encadrement}
+\subsubsection{Encadrement professionnel}
 \begin{itemize}
-    \item \textbf{Pierre Mirat} - Chef de projet, supervision directe
-    \item \textbf{Tom Richardson} - Tech Lead expérimenté du projet, collaboration technique étroite
+    \item \textbf{Pierre Mirat} -- Chef de projet, supervision stratégique et coordination métier
+    \item \textbf{Tom Richardson} -- Tech Lead expérimenté, encadrement technique et architectural
 \end{itemize}
 
-\subsubsection{Équipe opérationnelle}
+\subsubsection{Équipe collaborative}
 \begin{itemize}
-    \item \textbf{Louis Legendre} et \textbf{Mélina Loyant} - Développeurs collaborateurs
-    \item \textbf{Florian Carré} et \textbf{Marie-Émilie Deschez} - Analystes métier experts des processus SNCF
+    \item \textbf{Louis Legendre} et \textbf{Mélina Loyant} -- Développeurs expérimentés, collaboration technique quotidienne
+    \item \textbf{Florian Carré} et \textbf{Marie-Émilie Deschez} -- Analystes métier experts des processus SNCF, interface fonctionnelle essentielle
 \end{itemize}
 
-Cette organisation matricielle nécessite :
-\begin{itemize}
-    \item Des compétences organisationnelles développées
-    \item Une capacité d'adaptation permanente
-    \item Un équilibre efficace entre les contributions aux tâches de sprint récurrentes et l'avancement sur les objectifs spécialisés du projet d'automatisation
-\end{itemize}
-
-L'environnement collaboratif et la nature interdisciplinaire du projet COTS offrent une opportunité unique de travailler à l'intersection de :
-\begin{itemize}
-    \item L'ingénierie logicielle moderne
-    \item L'expertise métier ferroviaire
-    \item L'innovation en matière d'assurance qualité
-\end{itemize}
+Cette organisation favorise l'acquisition d'une vision complète des enjeux techniques et métier, permettant de développer une approche d'ingénieur intégrant les contraintes organisationnelles et les exigences de qualité d'un système critique. L'environnement collaboratif et la nature interdisciplinaire du projet COTS offrent un cadre d'apprentissage optimal à l'intersection de l'ingénierie logicielle moderne, de l'expertise métier ferroviaire et de l'innovation en matière d'assurance qualité.
 
 \section{Le projet COTS : Modernisation du système d'information ferroviaire}
 
@@ -117,7 +111,7 @@ Le projet COTS (Catalogue des Offres de Transport et de Services) constitue une 
 
 \subsubsection{Principes de conception}
 
-L'architecture du système COTS repose sur des principes modernes garantissant :
+L'architecture du système COTS repose sur des principes modernes garantissant une approche holistique de la gestion des données de transport :
 
 \begin{description}
     \item[Centralisation Intelligente] Consolidation des données d'offres de transport provenant de sources multiples en un référentiel unique faisant autorité, éliminant définitivement les silos informationnels et les incohérences de données
@@ -130,12 +124,12 @@ L'architecture du système COTS repose sur des principes modernes garantissant :
 
 \subsubsection{Technologies clés}
 
-L'architecture microservices actuelle s'appuie sur :
+L'architecture microservices actuelle s'appuie sur une stack technologique moderne et éprouvée :
 \begin{itemize}
-    \item \textbf{Java Spring Boot} pour les services métiers
-    \item \textbf{MongoDB} pour la persistance documentaire
-    \item \textbf{Apache Kafka} pour le streaming de données
-    \item \textbf{Architecture RESTful} pour les communications inter-services
+    \item \textbf{Java Spring Boot} pour les services métiers et l'infrastructure applicative
+    \item \textbf{MongoDB} pour la persistance documentaire et la gestion des données non-relationnelles
+    \item \textbf{Apache Kafka} pour le streaming de données et la communication asynchrone inter-services
+    \item \textbf{Architecture RESTful} pour les communications synchrones et l'exposition des APIs
 \end{itemize}
 
 \begin{figure}[H]
@@ -161,220 +155,186 @@ L'architecture microservices de COTS s'organise autour de neuf services critique
     \item[replayer-api] Système de rejeu de scénarios, permettant la reproduction et l'analyse de situations opérationnelles complexes
 \end{description}
 
-Cette architecture distribuée garantit :
-\begin{itemize}
-    \item Une séparation claire des responsabilités
-    \item Une scalabilité horizontale optimale
-    \item Une maintenabilité simplifiée
-    \item La flexibilité nécessaire pour l'évolution future du système
-\end{itemize}
+Cette architecture distribuée garantit une séparation claire des responsabilités, une scalabilité horizontale optimale, une maintenabilité simplifiée et la flexibilité nécessaire pour l'évolution future du système.
 
 \subsection{Domaines d'application et valeur métier}
 
-La polyvalence fonctionnelle du système COTS lui permet de couvrir l'ensemble des processus métiers liés à la gestion des offres de transport SNCF, créant une valeur ajoutée significative dans plusieurs domaines critiques :
+La polyvalence fonctionnelle du système COTS lui permet de couvrir l'ensemble des processus métiers liés à la gestion des offres de transport SNCF, créant une valeur ajoutée significative dans plusieurs domaines critiques.
 
-\subsubsection{Gestion des offres}
+\subsubsection{Gestion intégrée des offres de transport}
+Le système centralise l'ensemble du cycle de vie des offres :
 \begin{itemize}
-    \item Centralisation de la création, modification et gestion du cycle de vie complet des offres de transport
-    \item Couverture de l'ensemble des services SNCF (TGV, TER, Intercités)
+    \item Création, modification et gestion du cycle de vie complet des offres de transport
+    \item Couverture exhaustive des services SNCF (TGV, TER, Intercités, services régionaux)
     \item Processus harmonisés depuis la conception jusqu'au retrait des offres
+    \item Gestion de la tarification et des conditions commerciales
 \end{itemize}
 
-\subsubsection{Optimisation économique}
+\subsubsection{Optimisation économique et revenue management}
+COTS supporte l'amélioration des performances financières par :
 \begin{itemize}
-    \item Support des stratégies de tarification dynamique
-    \item Optimisation des revenus grâce à une vision unifiée et temps réel
-    \item Analyse de la demande client et ajustement des offres
+    \item Support des stratégies de tarification dynamique et yield management
+    \item Optimisation des revenus grâce à une vision unifiée et temps réel des données
+    \item Analyse avancée de la demande client et ajustement proactif des offres
+    \item Facilitation des études de marché et de la planification commerciale
 \end{itemize}
 
-\subsubsection{Excellence client}
+\subsubsection{Excellence de l'expérience client}
+L'amélioration de l'expérience utilisateur se traduit par :
 \begin{itemize}
-    \item Garantie d'une information d'offres cohérente, précise et actualisée
-    \item Harmonisation à travers tous les points de contact client :
-    \begin{itemize}
-        \item Gares et bornes
-        \item Plateformes web et mobile
-        \item Centres d'appel
-        \item Distributeurs partenaires
-    \end{itemize}
+    \item Garantie d'une information d'offres cohérente, précise et actualisée en temps réel
+    \item Harmonisation de l'information à travers l'ensemble des points de contact client
+    \item Réduction des incohérences et des erreurs d'information
+    \item Amélioration de la fiabilité du service d'information voyageur
 \end{itemize}
 
-\subsubsection{Écosystème partenarial}
+\subsubsection{Écosystème partenarial étendu}
+L'ouverture contrôlée vers l'écosystème externe facilite :
 \begin{itemize}
-    \item Facilitation des échanges de données harmonieux avec les partenaires externes
-    \item Intégration avec les agences de voyage
-    \item Connexion aux plateformes de réservation tierces
-    \item Support des systèmes de transport multimodaux
+    \item Les échanges de données harmonieux avec les partenaires commerciaux
+    \item L'intégration avec les agences de voyage et distributeurs tiers
+    \item Le support des systèmes de transport multimodaux et interopérables
+    \item La facilitation des partenariats commerciaux stratégiques
 \end{itemize}
 
-\subsection{Environnement concurrentiel et positionnement}
+\section{Enjeux et défis de la mission d'automatisation}
 
-\subsubsection{Offre de services Sopra Steria}
+\subsection{Problématique complexe de l'assurance qualité}
 
-Sopra Steria fournit des services complets pour répondre aux besoins clients dans le secteur transport :
+Les projets logiciels d'envergure comme COTS évoluent dans un contexte où l'assurance qualité constitue un défi majeur, particulièrement critique dans le domaine ferroviaire où la fiabilité et la sécurité sont impératives. Cette problématique s'intensifie avec la complexité croissante des architectures distribuées modernes.
+
+\subsubsection{Défis architecturaux des systèmes microservices}
+
+La complexité intrinsèque des systèmes distribués génère des enjeux d'assurance qualité spécifiques :
 \begin{itemize}
-    \item Développement de solutions bout-en-bout
-    \item Intégration système et services de maintenance continue
-    \item Conseil technique et gestion de projet
-    \item Formation et accompagnement à l'implémentation
+    \item Interdépendances complexes entre les neuf microservices de l'écosystème COTS
+    \item Gestion de la cohérence des données distribuées et des transactions inter-services
+    \item Validation end-to-end des parcours utilisateur dans un contexte distribué
+    \item Maintien des performances et de la résilience sous charge variable
+    \item Gestion des pannes en cascade et des mécanismes de récupération automatique
 \end{itemize}
 
-\subsubsection{Différenciation concurrentielle}
+\subsubsection{Limitations critiques de l'approche manuelle}
 
-Le projet COTS se distingue par :
-\begin{itemize}
-    \item Une approche sur mesure, spécifiquement adaptée aux exigences uniques de la SNCF
-    \item La conformité aux contraintes réglementaires du secteur ferroviaire français
-    \item Une personnalisation optimale pour le contexte ferroviaire français
-    \item Une intégration harmonieuse avec l'infrastructure et les processus SNCF existants
-\end{itemize}
-
-\subsubsection{Perspectives d'évolution}
-
-Les améliorations futures envisagées comprennent :
-\begin{itemize}
-    \item L'incorporation d'analytics avancés
-    \item L'apprentissage automatique pour la prédiction de demande
-    \item Des capacités de traitement temps réel améliorées
-    \item L'extension des fonctionnalités de personnalisation client
-\end{itemize}
-
-\section{Enjeux et défis de la mission}
-
-\subsection{Problématique de l'assurance qualité}
-
-Les projets logiciels d'envergure comme COTS évoluent dans un contexte où l'assurance qualité constitue un défi majeur, particulièrement critique dans le domaine ferroviaire où la fiabilité et la sécurité sont impératives.
-
-\subsubsection{Complexité des systèmes modernes}
-
-La complexité croissante des systèmes distribués, couplée à l'accélération des cycles de développement agiles, exacerbe les difficultés traditionnelles :
-\begin{itemize}
-    \item Interdépendances complexes entre microservices
-    \item Gestion de la cohérence des données distribuées
-    \item Validation de bout en bout des parcours utilisateur
-    \item Maintien de la performance sous charge variable
-\end{itemize}
-
-\subsubsection{Limitations de l'approche actuelle}
-
-L'approche actuelle de tests de non-régression (TNR), réalisée manuellement via l'outil ALM (Application Lifecycle Management), révèle plusieurs limitations structurelles :
+L'approche actuelle de tests de non-régression (TNR), réalisée manuellement via l'outil ALM (Application Lifecycle Management), révèle des limitations structurelles majeures :
 
 \begin{description}
-    \item[Inefficience Temporelle] Exécution séquentielle et manuelle de chaque scénario de test, générant des cycles de validation particulièrement longs et incompatibles avec les contraintes de livraison continue
-    \item[Vulnérabilité aux Erreurs] Manipulation manuelle des jeux de données et des paramètres de test, introduisant des risques d'erreur et d'incohérence dans les résultats de validation
-    \item[Intensité Ressource] Mobilisation significative des équipes qualité sur des tâches répétitives, limitant leur disponibilité pour des activités à plus forte valeur ajoutée
-    \item[Impact sur les Délais] Retards récurrents dans les cycles de déploiement dus aux contraintes temporelles des campagnes de test manuelles
-    \item[Limitations de Traçabilité] Difficultés de suivi précis des résultats de test et de génération de rapports consolidés pour le pilotage qualité
+    \item[Inefficience Temporelle Critique] Exécution séquentielle et manuelle générant des cycles de validation de 6 à 8 heures, incompatibles avec les objectifs de livraison continue et les contraintes opérationnelles d'un système critique
+    \item[Vulnérabilité aux Erreurs Humaines] Manipulation manuelle des jeux de données complexes et paramétrage répétitif, introduisant un taux d'erreur estimé à 15-20\% dans les processus de validation
+    \item[Saturation des Ressources Qualité] Mobilisation de 3 à 4 testeurs à temps plein sur des tâches répétitives, limitant drastiquement leur disponibilité pour l'innovation qualité et l'analyse exploratoire
+    \item[Impact sur la Vélocité de Développement] Retards récurrents de 2 à 3 jours dans les cycles de déploiement, compromettant l'agilité requise par les enjeux métier
+    \item[Déficit de Traçabilité et Reporting] Difficultés de consolidation des résultats et de génération de métriques fiables pour le pilotage qualité stratégique
 \end{description}
 
-\subsubsection{Défis spécifiques au projet COTS}
+\subsubsection{Enjeux spécifiques au contexte ferroviaire}
 
-Le projet COTS fait spécifiquement face aux défis suivants :
+Le projet COTS fait face à des défis d'assurance qualité particuliers liés à son contexte d'application :
 \begin{itemize}
-    \item Tests de régression suite aux mises à jour d'obsolescence
-    \item Validation des efforts de modernisation système
-    \item Maintien de la couverture de test complète avec l'augmentation de la complexité
-    \item Assurance de la compatibilité inter-services lors des déploiements
+    \item Validation des tests de régression suite aux mises à jour d'obsolescence technologique
+    \item Assurance de la compatibilité inter-services lors des déploiements en production
+    \item Maintien de la couverture de test exhaustive malgré l'augmentation de la complexité fonctionnelle
+    \item Conformité aux standards de sécurité et de fiabilité du secteur ferroviaire
 \end{itemize}
 
-\subsection{Objectifs de la mission et approche solution}
+\subsection{Objectifs d'ingénierie et approche innovation}
 
-Cette mission de stage s'articule autour d'une double ambition : l'acquisition d'une expérience opérationnelle complète dans le développement logiciel d'entreprise et la contribution innovante à l'amélioration des processus d'assurance qualité du projet COTS.
+Cette mission de stage s'articule autour d'un défi d'ingénierie majeur : concevoir et implémenter une solution d'automatisation révolutionnant les processus d'assurance qualité du projet COTS. L'approche adoptée vise à transformer une problématique opérationnelle en opportunité d'innovation technique et méthodologique.
 
-\subsubsection{Objectifs spécifiques}
+\subsubsection{Objectifs techniques stratégiques}
+
+La mission se structure autour de trois axes d'innovation complémentaires :
 
 \begin{description}
-    \item[Développement de Campagnes de Tests Automatisés] Conception et implémentation de scénarios de test complets utilisant le framework Cucumber pour le développement dirigé par le comportement (BDD), en collaboration étroite avec les analystes métier pour garantir la couverture exhaustive des exigences fonctionnelles
-    \item[Intégration CI/CD Avancée] Configuration et déploiement de l'automatisation Jenkins pour l'exécution transparente des campagnes de test au sein du pipeline d'intégration continue, incluant la mise en place de seuils de qualité et de mécanismes de validation automatique
-    \item[Optimisation du Pipeline de Déploiement] Intégration harmonieuse des tests automatisés dans les processus de déploiement pour assurer une validation systématique et fiable des nouvelles versions, réduisant significativement les risques de régression en production
+    \item[Conception d'un Framework BDD Intégré] Développement d'une solution d'automatisation native basée sur Cucumber, intégrée organiquement à l'architecture Spring Boot existante, permettant l'expression des exigences métier en langage naturel tout en garantissant une exécution technique robuste
+    \item[Orchestration CI/CD Intelligente] Implémentation d'un pipeline d'intégration continue sophistiqué avec Jenkins, intégrant des quality gates adaptatifs et des mécanismes de feedback automatique pour sécuriser les déploiements sans compromettre la vélocité de développement
+    \item[Architecture de Tests Distribuée] Conception d'une infrastructure de test capable de valider efficacement les interactions complexes entre microservices, avec gestion automatisée des environnements et des données de test
 \end{description}
 
-\subsubsection{Bénéfices opérationnels attendus}
+\subsubsection{Innovation méthodologique et scientifique}
 
-D'un point de vue opérationnel, cette mission vise à fournir :
+Le projet vise plusieurs contributions méthodologiques :
 \begin{itemize}
-    \item Des capacités d'assurance qualité améliorées
-    \item Une réduction de la charge de tests manuels
-    \item Des cycles de feedback plus rapides
-    \item Une confiance de release améliorée
-    \item Un risque réduit de problèmes en production
-    \item Une meilleure fiabilité système et satisfaction utilisateur
+    \item Développement d'une approche hybride BDD-microservices inédite dans le contexte ferroviaire
+    \item Création de patterns de test réutilisables pour architectures distribuées critiques
+    \item Élaboration de métriques de qualité avancées et de tableaux de bord prédictifs
+    \item Contribution à l'état de l'art en automatisation de tests pour systèmes critiques
 \end{itemize}
 
-\subsection{Méthodologie et approche de mise en œuvre}
+\subsubsection{Impacts opérationnels attendus}
 
-La réalisation de cette mission s'appuie sur une méthodologie agile adaptée, intégrant les principes Scrum avec les spécificités du développement de solutions de test automatisé.
-
-\subsubsection{Structure méthodologique}
-
-Cette approche se structure autour de six phases complémentaires et itératives :
-
-\textbf{Phase 1 : Intégration et Analyse}
+Les bénéfices visés dépassent l'optimisation technique pour englober une transformation organisationnelle :
 \begin{itemize}
-    \item Immersion complète dans l'écosystème technique COTS (architecture, technologies, processus de développement)
-    \item Analyse approfondie des pratiques de test existantes et identification des opportunités d'optimisation
-    \item Maîtrise de la stack technologique (Java Spring Boot, MongoDB, Apache Kafka, Jenkins, outils de développement collaboratif)
+    \item Réduction drastique des temps de cycles de validation (objectif : 85\% de réduction)
+    \item Amélioration significative de la fiabilité des tests (objectif : 95\% de reproductibilité)
+    \item Libération des ressources qualité pour des activités à forte valeur ajoutée
+    \item Accélération des cycles de mise en production et amélioration de la réactivité métier
+    \item Renforcement de la confiance dans les déploiements et réduction des risques opérationnels
 \end{itemize}
 
-\textbf{Phase 2 : Participation Opérationnelle}
+\subsection{Méthodologie d'ingénierie et approche systémique}
+
+La réalisation de cette mission s'appuie sur une méthodologie d'ingénierie rigoureuse, combinant approche agile et principes de conception architecturale, adaptée aux contraintes d'un système critique en production.
+
+\subsubsection{Démarche de conception systémique}
+
+L'approche méthodologique s'organise selon six phases intégrées :
+
+\textbf{Phase 1 : Analyse Systémique et Spécification}
 \begin{itemize}
-    \item Contribution active aux cérémonies agiles (daily standups, planification de sprint, rétrospectives d'amélioration continue)
-    \item Participation aux développements fonctionnels, corrections d'anomalies et processus de revue de code collaborative
-    \item Collaboration avec les analystes métier pour l'approfondissement de la compréhension des exigences fonctionnelles
+    \item Analyse approfondie de l'architecture COTS et identification des points de fragilité qualité
+    \item Étude des processus de test existants et cartographie des opportunités d'optimisation
+    \item Spécification des exigences fonctionnelles et non-fonctionnelles du framework d'automatisation
+    \item Définition des métriques de succès et des critères d'acceptation du projet
 \end{itemize}
 
-\textbf{Phase 3 : Conception et Développement}
+\textbf{Phase 2 : Conception Architecturale et Prototypage}
 \begin{itemize}
-    \item Architecture et implémentation du framework de tests automatisés basé sur Cucumber et les principes BDD
-    \item Développement de l'infrastructure de test intégrée à l'application Spring Boot existante
-    \item Création de bibliothèques de composants et d'utilitaires de test réutilisables pour maximiser l'efficacité et la maintenabilité
+    \item Conception de l'architecture du framework de tests avec patterns de résilience intégrés
+    \item Prototypage rapide et validation des concepts techniques critiques
+    \item Sélection et justification des choix technologiques (Cucumber, Spring Boot, Jenkins)
+    \item Conception des interfaces et des mécanismes d'intégration avec l'écosystème existant
 \end{itemize}
 
-\textbf{Phase 4 : Intégration CI/CD}
+\textbf{Phase 3 : Développement Itératif et Validation Continue}
 \begin{itemize}
-    \item Configuration avancée des jobs Jenkins pour l'orchestration automatisée des suites de tests
-    \item Implémentation de quality gates intelligents et de procédures de gestion d'échec adaptatives
-    \item Intégration transparente dans les workflows de déploiement existants
+    \item Implémentation incrémentale des composants du framework selon les principes TDD
+    \item Développement des scénarios de test BDD en collaboration étroite avec les analystes métier
+    \item Validation continue des performances et de la fiabilité en conditions quasi-production
+    \item Optimisation progressive basée sur les retours d'expérience et les métriques collectées
 \end{itemize}
 
-\textbf{Phase 5 : Validation et Optimisation}
+\textbf{Phase 4 : Intégration et Orchestration}
 \begin{itemize}
-    \item Validation exhaustive de la plateforme avec des scénarios réels et des volumes de données représentatifs
-    \item Optimisation des performances et de la fiabilité basée sur les résultats de test en conditions opérationnelles
-    \item Vérification de l'alignement avec les objectifs initiaux et ajustements si nécessaire
+    \item Configuration des pipelines Jenkins avec quality gates intelligents et adaptatifs
+    \item Intégration transparente dans les workflows de développement existants
+    \item Mise en place des mécanismes de monitoring et d'alerting pour le suivi opérationnel
+    \item Tests de charge et validation de la scalabilité du framework
 \end{itemize}
 
-\textbf{Phase 6 : Transfert et Pérennisation}
+\textbf{Phase 5 : Déploiement et Validation Opérationnelle}
 \begin{itemize}
-    \item Création d'une documentation technique et fonctionnelle complète pour l'utilisation et la maintenance futures
-    \item Formation approfondie des équipes et transfert de connaissances pour l'autonomie opérationnelle
-    \item Capitalisation des enseignements et formulation de recommandations pour les évolutions futures
+    \item Déploiement progressif en environnement de production avec stratégie de rollback
+    \item Validation exhaustive des scénarios métier critiques en conditions réelles
+    \item Collecte et analyse des métriques de performance et de fiabilité
+    \item Ajustements finaux basés sur les retours opérationnels des équipes utilisatrices
 \end{itemize}
 
-\subsubsection{Écosystème d'outils collaboratifs}
-
-L'environnement de travail s'appuie sur :
+\textbf{Phase 6 : Transfert de Connaissances et Pérennisation}
 \begin{itemize}
-    \item \textbf{JIRA} pour la gestion agile et le suivi des issues
-    \item \textbf{Confluence} pour la documentation et le partage de connaissances
-    \item \textbf{Microsoft Teams} pour la communication quotidienne et les réunions virtuelles
-    \item \textbf{Git} pour le contrôle de version et le développement collaboratif avec des processus de revue de code rigoureux
+    \item Élaboration d'une documentation technique et fonctionnelle complète
+    \item Formation approfondie des équipes de développement et de qualité
+    \item Définition des processus de maintenance et d'évolution du framework
+    \item Capitalisation des bonnes pratiques et recommandations pour les projets futurs
 \end{itemize}
 
 \section{Résumé}
 
-Ce chapitre contextuel a établi les fondements nécessaires à la compréhension de la mission de stage dans toute sa complexité. Les éléments clés présentés incluent :
+Ce chapitre contextuel a établi les fondements nécessaires à la compréhension de la mission de stage dans toute sa complexité technique et organisationnelle. L'analyse présentée structure la problématique selon trois dimensions d'analyse complémentaires qui préparent l'évaluation multidimensionnelle des chapitres suivants.
 
-\begin{itemize}
-    \item La présentation de Sopra Steria comme acteur majeur de la transformation numérique
-    \item L'analyse détaillée du projet COTS et de ses enjeux stratégiques pour la SNCF
-    \item La définition précise des objectifs et de la méthodologie de la mission
-\end{itemize}
+La présentation de Sopra Steria révèle l'environnement professionnel d'excellence dans lequel s'inscrit cette mission, soulignant l'expertise technique et la culture d'innovation de l'entreprise d'accueil. Le positionnement de leader européen de la transformation numérique contextualise la qualité des défis techniques proposés et l'ambition des solutions développées.
 
-Ces éléments constituent le socle conceptuel indispensable pour appréhender les réalisations techniques et l'analyse multidimensionnelle développées dans les chapitres suivants. Cette approche contextuelle permet de saisir l'articulation entre :
-\begin{itemize}
-    \item Les contributions opérationnelles quotidiennes
-    \item Le projet d'innovation spécialisé en automatisation de tests
-\end{itemize}
+L'analyse détaillée du projet COTS démontre l'importance stratégique de cette initiative de modernisation pour la SNCF et révèle la complexité architecturale qui constitue le défi technique central de la mission. L'architecture microservices présentée illustre les enjeux contemporains de l'ingénierie logicielle et justifie l'innovation méthodologique nécessaire pour l'automatisation des tests.
 
-Elle prépare ainsi l'analyse approfondie des dimensions technique, organisationnelle, environnementale et stratégique de cette expérience professionnelle enrichissante.
+La définition précise des enjeux et objectifs de la mission établit le cadre de référence pour l'évaluation des réalisations techniques et de leur impact opérationnel. Cette approche systémique permet d'appréhender l'articulation entre innovation technique, transformation organisationnelle et création de valeur, préparant l'analyse approfondie des dimensions technique, organisationnelle, environnementale et stratégique développées dans les chapitres suivants.
+
+Cette mission illustre parfaitement les défis contemporains de l'ingénierie logicielle où la maîtrise technique doit s'accompagner d'une vision systémique des enjeux organisationnels et sociétaux pour créer des solutions durables et génératrices de valeur.
